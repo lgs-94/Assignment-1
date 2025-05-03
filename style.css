@@ -1,158 +1,84 @@
-/* Reset default spacing */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* General styles */
 body {
   font-family: 'DM Sans', sans-serif;
-  background: linear-gradient(to right, #296eb4, #1789fc, #44bba4);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  color: #fff;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #296eb4, #1789fc, #ffd07b);
+  color: #222;
   line-height: 1.6;
-  margin: 0 20px;
 }
 
-/* Heading font */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
   font-family: 'Cal Sans', sans-serif;
+  color: #1d1d1d;
 }
 
-/* Header styles */
-header h1 {
-  font-size: 3rem;
-  color: #Ffd07b;
-  text-align: center;
-  margin-bottom: 20px;
+main, header, footer, section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
-header p {
-  text-align: center;
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-/* Navigation styles */
+/* Navigation */
 nav {
+  background-color: #296eb4;
+  padding: 1rem 0;
   text-align: center;
-  margin: 30px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 15px;
 }
 
 nav a {
-  color: #Ffd07b;
+  color: #ffffff;
   text-decoration: none;
-  font-size: 1.2rem;
-  margin: 0 15px;
-  padding: 5px 10px;
+  font-weight: bold;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 nav a:hover {
-  background-color: #44bba4;
-  border-radius: 5px;
+  color: #ffd07b;
+  text-decoration: underline;
 }
 
-/* Section headings */
-section h2 {
-  font-size: 2.5rem;
-  color: #ffffff;
-  margin-bottom: 10px;
+/* Image Grid */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 1rem;
 }
 
-section h3 {
-  font-size: 2rem;
-  color: #Ffd07b;
-  margin-bottom: 10px;
+.image-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
 }
 
-/* Paragraphs and text */
-section p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  color: #fff;
+/* Lists with margins */
+ol, ul {
+  padding-left: 2rem;
+  margin-right: 1rem;
 }
 
-/* Lists */
-section ul,
-section ol {
-  padding-left: 40px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-}
-
-section li {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-}
-
-/* Emphasis tags */
-em {
-  color: #Ffd07b;
-}
-
-strong {
-  color: #44bba4;
-}
-
-/* Custom classes */
+/* Utility classes (optional usage) */
 .highlight {
   background-color: #44bba4;
-  padding: 5px;
-  border-radius: 5px;
-}
-
-.cta-button {
-  background-color: #1789fc;
   color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-size: 1.1rem;
-  border-radius: 5px;
-  display: inline-block;
-  margin-top: 10px;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
 }
 
-.cta-button:hover {
-  background-color: #296eb4;
-}
-
-/* Gallery grid */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.gallery figure {
-  margin: 0;
-  padding: 10px;
-  background-color: #296eb4;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.gallery img {
-  max-width: 100%;
-  border-radius: 10px;
-}
-
-.gallery figcaption {
-  color: #fff;
-  font-size: 1.1rem;
-  margin-top: 10px;
-}
-
-/* Footer */
-footer p {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 1.1rem;
-  color: #fff;
-  padding: 15px;
-  background-color: #c3979f;
-  border-radius: 10px;
+.emphasis {
+  font-style: italic;
+  color: #c3979f;
 }
